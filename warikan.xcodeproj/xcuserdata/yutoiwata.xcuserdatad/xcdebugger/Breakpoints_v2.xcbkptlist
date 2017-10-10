@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "warikan/AppDelegate.swift"
+            timestampString = "529226991.571369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "warikan.AppDelegate.__deallocating_deinit"
+                  moduleName = "warikan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutoiwata/work/App/warikan/warikan/AppDelegate.swift"
+                  timestampString = "529225987.858725"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "warikan.AppDelegate.__allocating_init() -&gt; warikan.AppDelegate"
+                  moduleName = "warikan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutoiwata/work/App/warikan/warikan/AppDelegate.swift"
+                  timestampString = "529225987.862928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "warikan.AppDelegate.init() -&gt; warikan.AppDelegate"
+                  moduleName = "warikan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutoiwata/work/App/warikan/warikan/AppDelegate.swift"
+                  timestampString = "529225987.865203"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "warikan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutoiwata/work/App/warikan/warikan/AppDelegate.swift"
+                  timestampString = "529225987.867325"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
