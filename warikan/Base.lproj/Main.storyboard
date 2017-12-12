@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Bjl-aD-NPp"/>
                                     <constraint firstAttribute="height" constant="40" id="Mip-Ym-sc1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
