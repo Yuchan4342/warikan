@@ -9,23 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var myTextField: UITextField!
+    @IBOutlet weak var myTextField1: UITextField!
     @IBOutlet weak var myTextField2: UITextField!
     @IBOutlet weak var myLabel1: UILabel!
     @IBOutlet weak var myLabel2: UILabel!
-    @IBOutlet weak var myLabel3: UILabel!
     
     @IBAction func tapCalculate(_ sender: Any) {
         var x1: Int = 0
         var x2: Int = 0
         let unit: Int = 100
-        if let text = myTextField.text, let x = Int(text) {
+        if let text = myTextField1.text, let x = Int(text) {
             x1 = x
-            print("x1 = ", x1)
+            print("金額: ", x1)
         } else { return }
         if let text = myTextField2.text, let x = Int(text) {
             x2 = x
-            print("x2 = ", x2)
+            print("人数: ", x2)
         } else { return }
         if (x2 == 0) { return }
         if (x1 % x2 == 0) {
@@ -34,12 +33,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             let y1 = Int(floor(Double(x1 / x2 / unit))) * unit
             let y2 = x1 - y1 * x2;
-            myLabel1.text = "一人" + String(y1) + "円だと"
-            myLabel2.text = String(y2) + "円余ります。"
+            myLabel1.text = "一人" + String(y1) + "円で\n" + String(y2) + "円余ります。"
+            print(myLabel1.text!)
 //            let y3 = Int(ceil(Double(x1 / x2 / unit))) * unit
 //            let y4 = x1 - y1 * x2;
-//            myLabel1.text = "一人" + String(y3) + "円だと\n"
-//            myLabel2.text = String(y4) + "円足りません。"
+//            myLabel1.text = "一人" + String(y3) + "円で\n" + String(y4) + "円足りません。"
         }
     }
     
@@ -49,10 +47,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard gesture.state == .ended else { return }
         guard let label = gesture.view as? UILabel else { return }
         UIPasteboard.general.string = label.text
-        myLabel3.text = "Copied!"
+        myLabel2.text = "Copied!"
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             // 1.0秒後に実行したい処理
-            self.myLabel3.text = ""
+            self.myLabel2.text = ""
         }
     }
     
@@ -60,12 +58,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //
-        self.myTextField.delegate = self
+        self.myTextField1.delegate = self
         self.myTextField2.delegate = self
         // myLabelのタップなどに反応可能とする
         myLabel1.isUserInteractionEnabled = true
         // 右揃えにする
-        myTextField.textAlignment = NSTextAlignment.right
+        myTextField1.textAlignment = NSTextAlignment.right
         myTextField2.textAlignment = NSTextAlignment.right
     }
 
@@ -93,8 +91,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.myTextField.isFirstResponder) {
-            self.myTextField.resignFirstResponder()
+        if (self.myTextField1.isFirstResponder) {
+            self.myTextField1.resignFirstResponder()
         }
         if (self.myTextField2.isFirstResponder) {
             self.myTextField2.resignFirstResponder()
