@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myTextField2: UITextField!
     @IBOutlet weak var myLabel1: UILabel!
     @IBOutlet weak var myLabel2: UILabel!
+    @IBOutlet weak var myButton1: UIButton!
     
     @IBAction func tapCalculate(_ sender: Any) {
         var x1: Int = 0
@@ -24,20 +25,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else { return }
         if let text = myTextField2.text, let x = Int(text) {
             x2 = x
-            print(String(format: "人数: %6d円", x2))
+            print(String(format: "人数: %6d人", x2))
         } else { return }
         if (x2 == 0) { return }
         if (x1 % x2 == 0) {
             myLabel1.text = "一人" + String(x1 / x2) + "円！"
             print(myLabel1.text!)
         } else {
-            let y1 = Int(floor(Double(x1 / x2 / unit))) * unit
-            let y2 = x1 - y1 * x2;
-            myLabel1.text = "一人" + String(y1) + "円で\n" + String(y2) + "円余ります。"
+//            let y1 = Int(floor(Double(x1) / Double(x2) / Double(unit))) * unit
+//            let y2 = x1 - y1 * x2;
+//            myLabel1.text = "一人" + String(y1) + "円で\n" + String(y2) + "円足りません。"
             print(myLabel1.text!)
-//            let y3 = Int(ceil(Double(x1 / x2 / unit))) * unit
-//            let y4 = x1 - y1 * x2;
-//            myLabel1.text = "一人" + String(y3) + "円で\n" + String(y4) + "円足りません。"
+            let y3 = Int(ceil(Double(x1) / Double(x2) / Double(unit))) * unit
+            let y4 = abs(x1 - y3 * x2);
+            myLabel1.text = "一人" + String(y3) + "円で\n" + String(y4) + "円余ります。"
         }
     }
     
@@ -65,6 +66,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // 右揃えにする
         myTextField1.textAlignment = NSTextAlignment.right
         myTextField2.textAlignment = NSTextAlignment.right
+        // ラベルのフォントサイズを動的に変更可能にする
+        myLabel1.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {
