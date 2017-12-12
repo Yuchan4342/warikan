@@ -20,11 +20,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let unit: Int = 100
         if let text = myTextField1.text, let x = Int(text) {
             x1 = x
-            print("金額: ", x1)
+            print(String(format: "金額: %6d円", x1))
         } else { return }
         if let text = myTextField2.text, let x = Int(text) {
             x2 = x
-            print("人数: ", x2)
+            print(String(format: "人数: %6d円", x2))
         } else { return }
         if (x2 == 0) { return }
         if (x1 % x2 == 0) {
