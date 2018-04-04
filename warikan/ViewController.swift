@@ -68,6 +68,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         myTextField2.textAlignment = NSTextAlignment.right
         // ラベルのフォントサイズを動的に変更可能にする
         myLabel1.adjustsFontSizeToFitWidth = true
+        // キーボードをテンキー入力にする
+        myTextField1.keyboardType = UIKeyboardType.numberPad
+        myTextField2.keyboardType = UIKeyboardType.numberPad
     }
 
     override func didReceiveMemoryWarning() {
