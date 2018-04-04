@@ -31,6 +31,27 @@ class warikanUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        // 「Calculate」ボタンを取得
+        let myButton1 = app.buttons["myButton1"]
+        // 上のテキストフィールドを取得
+        let myTextField1 = app.textFields["myTextField1"]
+        // 上のテキストフィールドをタップしてフォーカスを当てる
+        myTextField1.tap()
+        // 2500と入力
+        myTextField1.typeText("2500")
+        // 下のテキストフィールドを取得
+        let myTextField2 = app.textFields["myTextField2"]
+        // 下のテキストフィールドをタップしてフォーカスを当てる
+        myTextField2.tap()
+        // 5と入力
+        myTextField2.typeText("5")
+        // ボタンをタップ
+        myButton1.tap()
+        let myLabel1 = app.staticTexts["myLabel1"]
+        // 結果を表示するラベルのテキストが「一人500円！」になっていれば成功
+        XCTAssertEqual(myLabel1.label, "一人500円！")
     }
     
 }
