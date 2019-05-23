@@ -26,20 +26,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         print("金額: ", x1, "円, 人数: ", x2, "人")
+        // 0 除算を防ぐ.
         if (x2 == 0) {
             print("Cannot divide by 0.")
             return
         }
+        // x1 が x2 で割り切れる場合.
         if (x1 % x2 == 0) {
-            myLabel1.text = "一人" + String(x1 / x2) + "円！"
+            myLabel1.text = "一人\(x1 / x2)円！"
             print(myLabel1.text ?? "")
         } else {
-//            let y1 = Int(floor(Double(x1) / Double(x2) / Double(unit))) * unit
-//            let y2 = x1 - y1 * x2;
-//            myLabel1.text = "一人" + String(y1) + "円で\n" + String(y2) + "円足りません。"
-            let y3 = Int(ceil(Double(x1) / Double(x2) / Double(unit))) * unit
-            let y4 = abs(x1 - y3 * x2);
-            myLabel1.text = "一人" + String(y3) + "円で\n" + String(y4) + "円余ります。"
+            let y1: Int = Int(floor(Double(x1) / Double(x2) / Double(unit))) * unit
+            let y2: Int = x1 - y1 * x2
+            myLabel1.text = "一人\(y1)円で\n\(y2)円足りません。"
+            print(myLabel1.text ?? "")
+            let y3: Int = Int(ceil(Double(x1) / Double(x2) / Double(unit))) * unit
+            let y4: Int = abs(x1 - y3 * x2)
+            myLabel1.text = "一人\(y3)円で\n\(y4)円余ります。"
             print(myLabel1.text ?? "")
         }
     }
