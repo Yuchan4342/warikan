@@ -16,11 +16,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myButton1: UIButton!
     
     @IBAction func tapCalculate(_ sender: Any) {
-        guard let x1: Int = Int(myTextField1.text ?? "") else {
+        guard let x1: Int = Int(self.myTextField1.text ?? "") else {
             print("Failed to convert textfield1 to Int")
             return
         }
-        guard let x2: Int = Int(myTextField2.text ?? "") else {
+        guard let x2: Int = Int(self.myTextField2.text ?? "") else {
             print("Failed to convert textfield2 to Int")
             return
         }
@@ -32,20 +32,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         // x1 が x2 で割り切れる場合.
         if (x1 % x2 == 0) {
-            myLabel1.text = "一人\(x1 / x2)円！"
-            print(myLabel1.text ?? "")
+            self.myLabel1.text = "一人\(x1 / x2)円！"
+            print(self.myLabel1.text ?? "")
         } else {
             // 一人あたりの金額を計算する時の単位.
             let unit: Int = 100
             let quotient: Double = Double(x1) / Double(x2)
             let y1: Int = Int(floor(quotient / Double(unit))) * unit
             let y2: Int = x1 - y1 * x2
-            myLabel1.text = "一人\(y1)円で\n\(y2)円足りません。"
-            print(myLabel1.text ?? "")
+            self.myLabel1.text = "一人\(y1)円で\n\(y2)円足りません。"
+            print(self.myLabel1.text ?? "")
             let y3: Int = Int(ceil(quotient / Double(unit))) * unit
             let y4: Int = abs(x1 - y3 * x2)
-            myLabel1.text = "一人\(y3)円で\n\(y4)円余ります。"
-            print(myLabel1.text ?? "")
+            self.myLabel1.text = "一人\(y3)円で\n\(y4)円余ります。"
+            print(self.myLabel1.text ?? "")
         }
     }
     
@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard gesture.state == .ended else { return }
         guard let label = gesture.view as? UILabel else { return }
         UIPasteboard.general.string = label.text
-        myLabel2.text = "Copied!"
+        self.myLabel2.text = "Copied!"
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             // 1.0秒後に実行したい処理
             self.myLabel2.text = ""
@@ -71,15 +71,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // 人数の初期値を 2とする.
         self.myTextField2.text = "2"
         // myLabelのタップなどに反応可能とする
-        myLabel1.isUserInteractionEnabled = true
+        self.myLabel1.isUserInteractionEnabled = true
         // 右揃えにする
-        myTextField1.textAlignment = NSTextAlignment.right
-        myTextField2.textAlignment = NSTextAlignment.right
+        self.myTextField1.textAlignment = NSTextAlignment.right
+        self.myTextField2.textAlignment = NSTextAlignment.right
         // ラベルのフォントサイズを動的に変更可能にする
-        myLabel1.adjustsFontSizeToFitWidth = true
+        self.myLabel1.adjustsFontSizeToFitWidth = true
         // キーボードをテンキー入力にする
-        myTextField1.keyboardType = UIKeyboardType.numberPad
-        myTextField2.keyboardType = UIKeyboardType.numberPad
+        self.myTextField1.keyboardType = UIKeyboardType.numberPad
+        self.myTextField2.keyboardType = UIKeyboardType.numberPad
     }
 
     override func didReceiveMemoryWarning() {
