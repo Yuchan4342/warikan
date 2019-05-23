@@ -61,6 +61,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //
         self.myTextField1.delegate = self
         self.myTextField2.delegate = self
+        // 人数の初期値を 2とする.
+        self.myTextField2.text = "2"
         // myLabelのタップなどに反応可能とする
         myLabel1.isUserInteractionEnabled = true
         // 右揃えにする
