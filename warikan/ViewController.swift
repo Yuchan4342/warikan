@@ -16,17 +16,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myButton1: UIButton!
     
     @IBAction func tapCalculate(_ sender: Any) {
-        var x1: Int = 0
-        var x2: Int = 0
         let unit: Int = 100
-        if let text = myTextField1.text, let x = Int(text) {
-            x1 = x
-            print(String(format: "金額: %6d円", x1))
-        } else { return }
-        if let text = myTextField2.text, let x = Int(text) {
-            x2 = x
-            print(String(format: "人数: %6d人", x2))
-        } else { return }
+        guard let x1: Int = Int(myTextField1.text ?? "") else {
+            print("Failed to convert textfield1 to Int")
+            return
+        }
+        guard let x2: Int = Int(myTextField2.text ?? "") else {
+            print("Failed to convert textfield2 to Int")
+            return
+        }
+        print("金額: ", x1, "円, 人数: ", x2, "人")
         if (x2 == 0) { return }
         if (x1 % x2 == 0) {
             myLabel1.text = "一人" + String(x1 / x2) + "円！"
