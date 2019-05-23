@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myButton1: UIButton!
     
     @IBAction func tapCalculate(_ sender: Any) {
-        let unit: Int = 100
         guard let x1: Int = Int(myTextField1.text ?? "") else {
             print("Failed to convert textfield1 to Int")
             return
@@ -36,6 +35,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             myLabel1.text = "一人\(x1 / x2)円！"
             print(myLabel1.text ?? "")
         } else {
+            // 一人あたりの金額を計算する時の単位.
+            let unit: Int = 100
             let quotient: Double = Double(x1) / Double(x2)
             let y1: Int = Int(floor(quotient / Double(unit))) * unit
             let y2: Int = x1 - y1 * x2
