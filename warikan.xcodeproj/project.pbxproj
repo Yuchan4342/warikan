@@ -34,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E54CB922229652330058CF47 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		E54CB923229652330058CF47 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E5B15CB01EDDB6FB00CD29DB /* warikan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warikan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B15CB31EDDB6FB00CD29DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B15CB51EDDB6FB00CD29DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,7 +190,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "岩田裕登";
 				TargetAttributes = {
 					E5B15CAF1EDDB6FB00CD29DB = {
@@ -212,12 +214,12 @@
 			};
 			buildConfigurationList = E5B15CAB1EDDB6FB00CD29DB /* Build configuration list for PBXProject "warikan" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = E5B15CA71EDDB6FB00CD29DB;
 			productRefGroup = E5B15CB11EDDB6FB00CD29DB /* Products */;
@@ -304,6 +306,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E5B15CB81EDDB6FB00CD29DB /* Base */,
+				E54CB922229652330058CF47 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E5B15CBD1EDDB6FB00CD29DB /* Base */,
+				E54CB923229652330058CF47 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -381,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

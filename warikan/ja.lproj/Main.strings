@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "3dA-tK-dPs"; */
+"3dA-tK-dPs.normalTitle" = "Calculate";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "DNr-4q-X1U"; */
+"DNr-4q-X1U.text" = "0";
+
+/* Class = "UILabel"; text = "人"; ObjectID = "Saw-Kj-3cA"; */
+"Saw-Kj-3cA.text" = "人";
+
+/* Class = "UILabel"; text = "0円"; ObjectID = "rbq-8f-O0i"; */
+"rbq-8f-O0i.text" = "0円";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "uKQ-4J-ZqI"; */
+"uKQ-4J-ZqI.text" = "0";
+
+/* Class = "UILabel"; text = "円"; ObjectID = "wgr-17-TXi"; */
+"wgr-17-TXi.text" = "円";
